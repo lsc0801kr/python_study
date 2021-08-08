@@ -5,8 +5,8 @@ url = 'https://comic.naver.com/webtoon/weekday'
 html = urllib.request.urlopen(url).read()
 soup = BeautifulSoup(html, 'html.parser')
 
-title = soup.find_all(class_='title')
+title = soup.find_all(class_='thumb')
 
 for i in title:
-    if len(i.attrs['title']) >= 10:
-        print(i.attrs['title'])
+    if len(i.attrs['thumb']) >= 10:
+        print(i.attrs['thumb'])
